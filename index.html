@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="board">
+        <div class="header">
+            <h1>TRELLO CLONE</h1>
+        </div>
+        
+        <div class="column" id="todo">
+            <h2>Todo(<span id="todo-count">0</span>)</h2>
+            <div class="tasks" id="todo-tasks"></div>
+        <input type="text" placeholder="type the task" class="task-input" id="todo-input">
+        <button class="button" onclick="addtask('todo')">add tasks</button>
+        </div>
+          
+    </div>
+    <div class="board">
+        <div class="column" id="doing">
+            <h2>doing (<span id="doing-count">0</span>)</h2>
+            <div class="tasks" id="doing-tasks"></div>
+        <input type="text" placeholder="type the task" class="task-input" id="doing-input">
+        <button class="button" onclick="addtask('doing')">add tasks</button>  
+        </div>
+         
+    </div>
+    <div class="board">
+        <div class="column" id="done">
+            <h2>done </h2>
+            <div class="tasks" id="done-tasks"></div>
+        <input type="text" placeholder="type the task" class="task-input" id="done-input">
+        <button class="button" onclick="addtask('done')">add tasks</button>  
+        </div>
+        
+    </div>
+    <div class="context-menu">
+        <ul>
+            <li onclick="editTask()">Edit Task</li>
+            <li onclick="Deletetask()">Delete Task</li>
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
